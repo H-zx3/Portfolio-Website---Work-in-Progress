@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos Galery</title>
+    <link rel="stylesheet" type="text/css" href="stylephotos.css" />
+</head>
+<body>
+    <div class="full-img" id="fullimgBox"><!-- sukuriu id's ir onclick  kad butu galima isjungti nuotrauka -->
+        <img src="photos/photo1.jpg" id="full-img">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+        <img src="photos/photo1.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo2.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo3.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo4.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo5.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo5.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo6.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/photo7.jpg" onclick="openFullImg(this.src)">
+        <img src="photos/home2.jpg" onclick="openFullImg(this.src)">
+
+    </div>
+
+    <script>
+       let fullimgBox = document.getElementById("fullimgBox");
+       let fullimg = document.getElementById("full-img");
+
+       
+       function openFullImg(pic){
+           fullimgBox.style.display = "flex";
+           fullimg.src = pic;   
+           
+       }
+
+       function closeFullImg(){
+           fullimgBox.style.display = "none";
+       }
+
+    </script>    
+<!-- prima img faila kaip pic-->
+
+</body>
+</html>
